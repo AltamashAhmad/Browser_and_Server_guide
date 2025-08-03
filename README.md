@@ -51,7 +51,7 @@ Imagine you type `https://example.com/notes` into your browser. Here’s a simpl
 ```mermaid
 sequenceDiagram
     participant Client (Browser)
-    participant Server (e.g., Node.js)
+    participant Server (e.g., "Node.js")
 
     Client->>Server: 1. Sends HTTP GET request for /notes
     Note over Server: 2. Web server software receives the request.
@@ -191,7 +191,6 @@ graph TD
         Browser->>Server: 1. SYN (I want to connect)
         Server-->>Browser: 2. SYN-ACK (I hear you and I agree)
         Browser->>Server: 3. ACK (Connection established)
-    end
     ```
     This handshake ensures both the client and server are ready to communicate, guaranteeing that data won't be lost.
 
@@ -787,7 +786,7 @@ Let's put everything we've learned together into a single, comprehensive diagram
 
 ```mermaid
 flowchart TD
-    A[Client (Browser)] -->|Sends HTTP Request| B[Web Server (ExpressJS/NestJS)]
+    A[Client (Browser)] -->|Sends HTTP Request| B[Web Server (Express or Nest)]
 
     B --> C[Middleware Layer]
     C --> D[Authentication Middleware]
